@@ -91,10 +91,12 @@ multiply(4, 3, function(answer){
 */
 
 function contains(arr, name, callback){
-  if(name != ''){
-    callback(true);
-  }else{
-    callback(false);
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] == name){
+      callback(true);
+    }else{
+      callback(false);
+    }
   }
 }
 
